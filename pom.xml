@@ -11,6 +11,7 @@
 	<modules>
 		<module>layer</module>
 		<module>lambda</module>
+		<module>app</module>
 	</modules>
 	<repositories>
 		<repository>
@@ -114,6 +115,23 @@
 				<artifactId>guice</artifactId>
 				<version>7.0.0</version>
 			</dependency>
+			<!--
+			https://mvnrepository.com/artifact/software.amazon.awssdk/bedrockagentruntime -->
+			<dependency>
+				<groupId>software.amazon.awssdk</groupId>
+				<artifactId>bedrockagentruntime</artifactId>
+				<version>${aws.sdk.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>apache-client</artifactId>
+				<groupId>software.amazon.awssdk</groupId>
+				<version>${aws.sdk.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>netty-nio-client</artifactId>
+				<groupId>software.amazon.awssdk</groupId>
+				<version>${aws.sdk.version}</version>
+			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
 				<groupId>org.mockito</groupId>
@@ -201,5 +219,6 @@
 		<jakarta.ws.rs-api-version>2.1.6</jakarta.ws.rs-api-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mockito.version>5.12.0</mockito.version>
+		<aws.sdk.version>2.27.7</aws.sdk.version>
 	</properties>
 </project>
